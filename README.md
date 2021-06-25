@@ -1,6 +1,19 @@
 # Charts2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+This project was generated for test LTTS user select get and post api both should run in same time becuase api and angular connect to by localhost <a href="javascript:void(0)">http://localhost:3000/finduser </a>with latest version of [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.'
+
+## Installation
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
 
 ## Development server
 
