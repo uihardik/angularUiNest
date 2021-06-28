@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {ApiService} from './service/apiservice.service'
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import * as THREE from 'three'
 
 @Component({
   selector: 'app-root',
@@ -7,27 +7,17 @@ import {ApiService} from './service/apiservice.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'charts2';
-  getRes:any;
-  postRes:any;
-  constructor(private api: ApiService){
+   @ViewChild('rendererContainer',{static:true}) 'rendererContainer': ElementRef;
+  
+  renderer = new THREE.WebGLRenderer();
+  scene:any= null;
+  camera:any= null;
+  mesh:any= null;
 
+ 
+
+  constructor() {
   }
 
-  getRs(){
-    this.api.getUserDetail().subscribe(
-      (res:any) => {
-        console.log(res);
-        this.getRes=res;
-        }
-    )
-  }
-  postRs(){
-    this.api.findUser().subscribe(
-      (res:any) => {
-        console.log(res);
-        this.postRes=res;
-        }
-    )
-  }
+
 }
