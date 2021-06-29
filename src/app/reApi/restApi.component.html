@@ -3,12 +3,12 @@
         <!-- Resources -->
         <button class="btn" (click)="getRs()"> Get Responds</button>
         <h2>Resources</h2>
-        <p>{{getRes}}</p>
+        <pre> <p>{{getRes | json}}</p></pre>
     </div>
     <div class="leftSec">
         <button class="btn" (click)="postRs()"> Post Responds</button>
         <!-- Resources -->
         <h2>Resources</h2>
-        <p>{{postRes}}</p>
+        <pre> <p>{{postRes | json}}</p></pre>
     </div>
 </div>
